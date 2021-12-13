@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	  <meta name="viewport" content="width=device-width,height=device-height,intial-scale=1.0"/>
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	  <script type="text/javascript" src="js/sign.js"></script>
+	<head>
+	
+	<body>
+		<style>
+			
+			body{
+				margin: 0;
+				padding: 0;
+				font-family: sans-serif;
+				background: #34495e;
+			}
+			@media (max-width: 768px){
+			  .form{
+			     width: 300px;
+			     padding: 40px;
+			     position: absolute;
+			     top: 40%;
+			     left: 50%;
+			     transform: translate(-50%,-50%);
+			     background: #191919;
+			     text-align: center;
+			  }
+			  .form h1{
+				   color: white;
+				   text-transform: uppercase;
+				   font-weight: 500px;
+			  }
+			  .form input[type="text"],.form input[type="email"],.form input[type="tel"]{
+				   border: 0;
+				   background: none;
+				   display: block;
+				   margin: 20px auto;
+				   text-align: center;
+				   border: 2px solid #3498db;
+				   padding: 14px 10px;
+				   width: 200px;
+				   outline: none;
+				   color: white;
+				   border-radius: 24px;
+				   transition: 0.25s;
+			  }
+			  .form input[type="email"]:focus{
+				   width: 280px;
+				   border-color: #2ecc71;
+			  }
+			  .form input[type = "submit"]{
+				   border: 0;
+				   background: none;
+				   display: block;
+				   margin: 20px auto;
+				   text-align: center;
+				   border: 2px solid #2ecc71;
+				   padding: 10px 40px;
+				   outline: none;
+				   color: white;
+				   border-radius: 24px;
+				   transition: 0.25s;
+				   cursor: pointer;
+			  }
+			  .form input[type="submit"]:hover{
+				   background: #2ecc71;
+			  }
+			  #copyright{
+   	  	   color: #fff;
+   	  	   text-align: center;
+   	  	   transform: translateY(30px);
+   	  	   padding-bottom: 10px;
+   	    }
+   	    footer{
+   	    	color: #fff;
+   	    	background: #1e1e1e;
+   	    	padding-top: 20px;
+   	    	transform: translateY(200%);
+   	    	text-align: center;
+   	    	height: 300px;
+   	    }
+   	    footer p{
+   	    	font-size: 14px;
+   	    	padding-left: 2px;
+   	    }
+			}
+			@media (min-width: 575px){
+				.form{
+			     width: 750px;
+			     padding: 80px;
+			     position: absolute;
+			     top: 40%;
+			     left: 50%;
+			     transform: translate(-50%,-50%);
+			     background: #191919;
+			     text-align: center;
+			  }
+			  .form h1{
+			     color: white;
+			     text-transform: uppercase;
+				   font-weight: 1000px;
+			  }
+			  .form input[type="email"]{
+				   border: 0;
+				   background: none;
+				   display: block;
+				   margin: 40px auto;
+				   text-align: center;
+				   border: 4px solid #3498db;
+				   padding: 28px 20px;
+				   font-size: 30px;
+				   width: 400px;
+				   outline: none;
+				   color: white;
+				   border-radius: 48px;
+				   transition: 0.25s;
+			  }
+			  .form input[type="email"]:focus{
+				   width: 560px;
+				   border-color: #2ecc71;
+			  }
+			  .form input[type = "submit"]{
+				   border: 0;
+				   background: none;
+				   display: block;
+				   margin: 40px auto;
+				   text-align: center;
+				   border: 4px solid #2ecc71;
+				   padding: 20px 80px;
+				   font-size: 30px;
+				   outline: none;
+				   color: white;
+				   border-radius: 48px;
+				   transition: 0.25s;
+				   cursor: pointer;
+			  }
+			  .form input[type="submit"]:hover{
+				   background: #2ecc71;
+			  }
+			  #copyright{
+   	  	   color: #fff;
+   	  	   text-align: center;
+   	  	   font-size: 35px;
+   	  	   transform: translateY(70px);
+   	  	   padding-bottom: 50px;
+   	    }
+   	    footer{
+   	    	color: #fff;
+   	    	background: #1e1e1e;
+   	    	padding-top: 20px;
+   	    	transform: translateY(240%);
+   	    	text-align: center;
+   	    	height: 670px;
+   	    }
+   	    footer p{
+   	    	font-size: 30px;
+   	    	padding-left: 10px;
+   	    }
+			}
+		</style>
+		
+		<div class="form">
+			<input type="email" placeholder="digite seu email registrado" id="mail"/>
+			<input type="submit" id="delete" value="excluir" onclick="deletar()"/>
+		</div>
+		
+		
+		<script>
+			
+			var db = openDatabase("myDB", "1.0", "samods db", 2 * 1024 * 1024);
+	    
+			function unregistered(){
+	      window.alert("Seu registro foi cancelado com sucesso.A partir de agora segundo o seu consentimento não lhe enviaremos mais nenhuma nova notificação.");
+	      window.open("index.html");
+      }
+			
+			function deletar(){
+				var email = document.getElementById("mail").value;
+				db.transaction(function(tx){
+					tx.executeSql("SELECT email FROM users WHERE email=?", [email], function(tx,resultado){
+						var [rows] = resultado.rows;
+					  if (email == rows.email){
+				   	   tx.executeSql("DELETE FROM users WHERE email=?", [email]);
+					  }
+				 });
+			  });
+			  unregistered();
+			}
+		</script>
+		
+		<script type="text/javascript" src="js/sidebar.js"></script>
+   <br><br><br>
+   
+   <br/>
+   <footer>
+   	 <p onclick="contact()">Contate-nos</p>
+   	 <p onclick="about_developer()">Sobre o desenvolvedor</p>
+   	 <p onclick="privacy_policy()">política de privacidade</p>
+   	 <p onclick="terms()">termos de uso</p>
+   	 <p onclick="notifications()">notificações</p>
+   	 <p onclick="feedback()">feedback</p>
+   	 <p onclick="license()">Licensa</p>
+     <p id="copyright"></p>
+   </footer>
+	</body>
+		
+</html>

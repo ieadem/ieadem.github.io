@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	  <meta name="viewport" content="width=device-width,height=device-height,intial-scale=1.0"/>
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	  <script type="text/javascript" src="js/sign.js"></script>
+	  
+	  
+	  <style>
+	  body{
+    		width: 100%;
+    		margin: 0;
+    		padding: 0;
+    }
+    @media (max-width: 768px){
+   		header{
+   			width: 100%;
+   			height: 4%;
+   			margin-bottom: 40px;
+   			justify-content: center;
+   			display: flex;
+      	align-items: center;
+	      background-color: #121212;
+	      box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+   	 }
+   	 footer{
+   	 	background: #1e1e1e;
+   	 	color: #fff;
+   	 	text-align: center;
+   	 	justify-content: center;
+   	 	padding-top: 20px;
+   	 	padding-bottom: 60px;
+   	 }
+   	 footer p{
+   	 	font-size: 14px;
+   	 	padding-top: 10px;
+   	 }
+   	 h5{
+   	  	color: white;
+   	 }
+   	 #copyright{
+   	  	color: #fff;
+   	  	text-align: center;
+   	  	transform: translateY(40px);
+   	 }	 
+	   .form{
+      	background-color: white;
+      	padding-left: 20px;
+      	padding-right: 10px;
+     }
+     .form p{
+     	margin: 20px 0px 40px 0px;
+     }
+     .form input[type="text"],.form input[type="email"],.form input[type="tel"]{
+      	margin-top: 5px;
+	    	margin-bottom: 20px;
+      	caret-color: #2962FF;
+      	text-indent: 10pt;
+      	border: 1px solid #0066FF;
+      	border-radius: 5px;
+      	line-height: 40px;
+      	transition: 0.25s;
+      	display: block;
+       	width: 97%;
+     }
+   
+     .form button:hover{
+   	    background: #2ecc71;
+     }
+   
+     .form button{
+				border: 0;
+				margin: 20px auto;
+				padding: 10px 40px;
+				text-align: center;
+				border: 2px solid #2ecc71;
+				border-radius: 24px;
+				outline: none;
+				transition: 0.25s;
+				cursor: pointer;
+				display: block;
+				color: white;
+				background: navy; /*#939DB6;*/
+	   }
+			
+	   #check ~ #save{
+				display: none;
+	   }
+	   #check ~ #view{
+				background: white;
+				color: lightblue;
+	   }
+			
+	   #check:checked ~ #save{
+				display: block;
+	   }
+	   #check:checked ~ #view{
+				display: none;
+	   }
+	   #sp{
+	   	font-size: 12px;
+	   }
+   }
+   
+   @media (min-width: 575px){
+   		header{
+   			width: 100%;
+   			height: 1%;
+   			margin-bottom: 80px;
+   			justify-content: center;
+   			display: flex;
+      	align-items: center;
+	      background-color: #121212;
+	      box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+   	 }
+   	 footer{
+   	 	background: #1e1e1e;
+   	 	color: #fff;
+   	 	text-align: center;
+   	 	padding-top: 20px;
+   	 	padding-bottom: 90px;
+   	 }
+   	 footer p{
+   	 	font-size: 30px;
+   	 	padding-top: 30px;
+   	 }
+   	 h5{
+   	  	color: white;
+   	  	font-size: 35px;
+   	 }
+   	 #copyright{
+   	  	color: #fff;
+   	  	text-align: center;
+   	  	font-size: 30px;
+   	  	transform: translateY(60px);
+   	 }
+   	 label{
+   	 	  font-size: 32px;
+   	 }	 
+	   .form{
+      	background-color: white;
+      	padding-left: 40px;
+      	padding-right: 20px;
+     }
+     .form p{
+     	margin: 40px 0px 80px 0px;
+     	font-size: 25px;
+     }
+     #sp{
+     	font-size: 25px;
+     }
+     .form input[type="text"],.form input[type="email"],.form input[type="tel"]{
+      	margin-top: 10px;
+	    	margin-bottom: 40px;
+      	caret-color: #2962FF;
+      	text-indent: 20pt;
+      	border: 1px solid #0066FF;
+      	border-radius: 10px;
+      	line-height: 80px;
+      	font-size: 30px;
+      	transition: 0.25s;
+      	display: block;
+       	width: 97%;
+     }
+   
+     .form button:hover{
+   	    background: #2ecc71;
+     }
+   
+     .form button{
+				border: 0;
+				margin: 40px auto;
+				padding: 20px 80px;
+				text-align: center;
+				border: 4px solid #2ecc71;
+				border-radius: 48px;
+				font-size: 25px;
+				outline: none;
+				transition: 0.25s;
+				cursor: pointer;
+				display: block;
+				color: white;
+				background: navy; /*#939DB6;*/
+	   }
+	   #check ~ #save{
+				display: none;
+	   }
+	   #check ~ #view{
+				background: white;
+				color: lightblue;
+	   }
+			
+	   #check:checked ~ #save{
+				display: block;
+	   }
+	   #check:checked ~ #view{
+				display: none;
+	   }
+   }
+	  </style>
+	</head>
+	<body>
+    <header>
+		  <center><h5>Notificações</h5></center>
+	  </header>
+	  
+		<form class="form">
+		 <p>olá caro usuário, para receber nossas notificações primeiramente é necessário registrar-se em nosso site.No entanto, faça já seu registro logo abaixo! </p>
+			
+		 <label for="name">Nome</label>
+     <input type="text" name="name" id="nome" placeholder="Informe seu nome" required minlength="2" maxlength="25"/>
+     	
+     <label for="email">E-mail</label>
+     <input name="email" id="email" type="email" placeholder="Informe seu email" required minlength="12" maxlength="50"/>
+     	
+     <label for="tel">Tel</label>
+     <input name="tel" type="tel" id="tel" placeholder="informe seu telefone" required="true"/>
+     <input type="checkbox" required="true" id="check"><span id="sp">De acordo com as Leis 12.965/2014 e 13.709/2018, que controlam o uso da internet e o tratamento de dados pessoais no Brasil, ao me increver eu autorizo sa-mods( dono deste site) a enviar-me notificações por e-mail ou outros meios e concordo com seus <a href="terms.html">Termos de Uso</a> e <a href="privacy_policy.html">Política de Privacidade!</a></span>
+       <button type="submit" id="save">Enviar</button>
+       <button type="submit" id="view">Enviar</button>
+     </input>
+   </form>
+	 
+		<script>
+			window.addEventListener('load', carregado);
+			
+			var db = openDatabase("myDB", "1.0", "samods db", 2 * 1024 * 1024);
+			
+			db.transaction(function(tx){
+				tx.executeSql("CREATE TABLE IF NOT EXISTS users (nome TEXT,email TEXT,tel NUMBER)");
+			});
+			
+			function carregado(){
+				document.getElementById("save").addEventListener("click", salvar);
+			}
+			function registered(){
+       	window.alert("Seu regitro foi efetuado com sucesso.Sempre que houver novas notificações enviaremos a você; portanto aguarde!");
+       	window.open("index.html");
+      }
+			
+			function salvar(){
+				var nome = document.getElementById("nome").value;
+				var email = document.getElementById("email").value;
+				var tel = document.getElementById("tel").value;
+				
+				db.transaction(function(tx){
+						tx.executeSql("INSERT INTO users (nome, email, tel) VALUES(?,?,?)",[nome,email,tel]);
+				});
+				registered();
+			}
+			
+		</script>
+		
+		<script type="text/javascript" src="js/sidebar.js"></script>
+   <br><br><br>
+   
+   <br/>
+   <footer>
+   	 <p onclick="contact()">Contate-nos</p>
+   	 <p onclick="about_developer()">Sobre o desenvolvedor</p>
+   	 <p onclick="privacy_policy()">política de privacidade</p>
+   	 <p onclick="terms()">termos de uso</p>
+   	 <p onclick="notifications()">notificações</p>
+   	 <p onclick="feedback()">feedback</p>
+   	 <p onclick="license()">Licensa</p>
+     <p id="copyright"></p>
+   </footer>
+		
+	</body>
+</html>
