@@ -6,30 +6,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="sa-mods"/>
-    <meta name="description" content="Sobre o desenvolvedor do SA Whatsapp"/>
+    <meta name="keywords" content="ieadem, congregações"/>
+    <meta name="description" content="congregações"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript" src="js/data.js"></script>
-    <title>Sobre o desenvolvedor</title>
+    <title>ieadem - Congregações</title>
     
 </head>
 <body>	
 	<header>
-		<!--<img src="img/logo.png" alt="" class="logo">-->
-			
-		<svg>
-   	<symbol id="s-text">
-   		<text y="60%">ieadem</text>
-   	</symbol>
-   	<g class="g-ants">
-   		<use xlink:href="#s-text" class="text-copy"></use>
-   		<use xlink:href="#s-text" class="text-copy"></use>
-   		<use xlink:href="#s-text" class="text-copy"></use>
-   		<use xlink:href="#s-text" class="text-copy"></use>
-   		<use xlink:href="#s-text" class="text-copy"></use>
-   	</g>
-   </svg>
-   
+		<img src="img/icon.png" alt="" class="logo">
 		<ul>
 			<li class="menu-item" onclick="home()">Página_inicial</li>
 			<li class="menu-item" onclick="congregations()">Congregações</li>
@@ -52,9 +37,9 @@
 	
 	<script type="text/javascript" src="js/sidebar.js"></script>
    <br>
+   	
   
-  
-   <div class="details">
+  <!--<div class="details">
    <details>
    	<summary>sede</summary>
    	<img src="img/sede.png">
@@ -425,7 +410,7 @@
    		
    	<div class="container">
 	 	<div class="card">
-	 		<image source src="img/lilian.png" class="self"/>
+	 		<image source src="img/lílian.jpg" class="self"/>
 	 		<div class="layer">
 	 			<span></span>
 	 			<span></span>
@@ -459,14 +444,34 @@
 	 	</div>
 	 </div>
    </details>
-   </div>
-   
-   <!--<center><label for="function"><t>manual de uso das funções:</t></label></center><br/>
-   <center><select name="função" id="data" >
+   </div>-->
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+    	VanillaTilt.init(document.querySelectorAll(".card"),{
+    		max: 25,
+    		speed: 400,
+    		glare: true,
+    		"max-glare": 1,
+    	});
+    </script>
+   <center><label for="function"><h5>escolha a congregação abaixo:</h5></label></center><br/>
+   <center><select name="função" id="data">
         <option>Carregando...</option>
     </select></center>
-    <div class="text"><i id="text"></i></div>-->
-   
+    <div class="congregacao"><i id="congregacao"></i></div>
+    <br/>
+   	<details id="dts">
+   	<summary>Obreiros</summary>
+   	<br/>
+    <div class="object"><i id="object"></i></div>
+    </details>
+    <details id="dts2">
+    	<summary>Líderes e auxiliares</summary>
+     <div class="object"><i id="object2"></i></div>
+    </details>
+    
+    <script type="text/javascript" src="js/data.js"></script>
+    
    <footer id="footer2">
    	 <p onclick="contact()">Contate-nos</p>
    	 <p onclick="about_developer()">Sobre o desenvolvedor</p>
