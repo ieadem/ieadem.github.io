@@ -753,15 +753,16 @@ const ieadem = {
     }
 };*/
 
-
 window.onload = function(){
     let list = document.getElementById("data");
     let div_text = document.getElementById("object");
     let div_text2 = document.getElementById("object2");
     let congregacao = document.getElementById("congregacao");
+    let dts = document.getElementById("dts");
+    let dts2 = document.getElementById("dts2");
     // Remove a opÃ§Ã£o "Carregando..." da lista
     list.innerHTML = "";
-    // Adiciona cada elemento contido no objeto com as informaÃ§Ãµes
+    // Adiciona cada elemento contido no objeto com as informações
     
     for (key in ieadem) {
     	   if (key == "select"){
@@ -783,20 +784,21 @@ window.onload = function(){
        let adm = adms[this.value];
         
        if (this.value !== "select"){
-          document.getElementById("dts").style.visibility = `visible`;
-          document.getElementById("dts").style.position = `relative`;
+          dts.style.visibility = `visible`;
+          dts.style.position = `relative`;
+          
           if (this.value == "petruza"){
-          	document.getElementById("dts2").style.visibility = `hidden`;
-             document.getElementById("dts2").style.position = `absolute`;
+          	 dts2.style.visibility = `hidden`;
+             dts2.style.position = `absolute`;
           }else{
-               document.getElementById("dts2").style.visibility = `visible`;
-               document.getElementById("dts2").style.position = `relative`;
+               dts2.style.visibility = `visible`;
+               dts2.style.position = `relative`;
           }
        }else{
-        	document.getElementById("dts").style.visibility = `hidden`;
-          document.getElementById("dts").style.position = `absolute`;
-          document.getElementById("dts2").style.visibility = `hidden`;
-          document.getElementById("dts2").style.position = `absolute`;
+        	dts.style.visibility = `hidden`;
+          dts.style.position = `absolute`;
+          dts2.style.visibility = `hidden`;
+          dts2.style.position = `absolute`;
         };
         
        congregacao.innerHTML += `
