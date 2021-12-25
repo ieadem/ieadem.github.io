@@ -3,6 +3,23 @@ var menu = document.getElementById('Menu');
 
 mobileMenu.addEventListener("click", function(){
 	menu.classList.toggle('open');
+	if (document.querySelector('.congregacao').style.visibility == `hidden`){
+		document.querySelector('.congregacao').style.visibility = `visible`;
+		if (document.getElementById('data').value !== 'select'){
+	   	 document.getElementById('dts').style.display =`block`;
+	   	 document.getElementById('dts2').style.display = `block`;
+	   	 document.getElementById('dts').style.position = `relative`;
+	   	 document.getElementById('dts2').style.position = `relative`;
+		}
+	}else{
+		  if (document.getElementById('data').value !== 'select'){
+	   	document.querySelector('.congregacao').style.visibility = `hidden`;
+	   	document.getElementById('dts').style.display =`none`;
+	   	document.getElementById('dts2').style.display = `none`;
+	   	document.getElementById('dts').style.position = `absolute`;
+	   	document.getElementById('dts2').style.position = `absolute`;
+	   	}
+	}
 })
 
 
