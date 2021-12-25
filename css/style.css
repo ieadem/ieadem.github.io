@@ -54,6 +54,7 @@ header{
 	background-color: #121212;
 	box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
 	z-index: 12;
+	
 }
 header:before{
 	position: absolute;
@@ -94,7 +95,7 @@ ul .menu-item {
 	top: 88px;
 	left: 0;
 	transform: translateX(-100%);
-	height: calc(100% - 80px);
+	height: calc(100% - 390px);
 	width: 70%;
 	display: flex;
 	justify-content: flex-start;
@@ -143,8 +144,27 @@ ul .menu-item {
    	margin-top: 40px;
    	margin-bottom: 40px;
    	font-family: Open Sans, sans-serif;
-   	color: #7983F8;
-   }
+   	color: #7983Fe;
+   	visibility: hidden;
+		position: absolute;
+  
+   .details {
+	display: grid;
+	text-align: center;
+	justify-content: center;
+	}
+.details details{
+	margin-top: 30px;
+	font-size: 18px;
+	color: teal;
+	background-color: None;
+}
+.details details p{
+	color: #bfbfbf;
+	padding-left: 0px;
+	font-size: 15px;
+}
+}
    
 	ul{
 		display: none;
@@ -254,26 +274,6 @@ ul .menu-item {
    	  padding-left: 30px;
    	  padding-right: 30px;
    }
-   .details {
-	display: grid;
-	text-align: center;
-	justify-content: center;
-	}
-	details{
-		visibility: hidden;
-		position: absolute;
-	}
-.details details{
-	margin-top: 30px;
-	font-size: 18px;
-	color: teal;
-	background-color: None;
-}
-.details details p{
-	color: #bfbfbf;
-	padding-left: 0px;
-	font-size: 15px;
-}
    footer{
     	width: 100%;
      	padding-top: 20px;
@@ -292,7 +292,7 @@ ul .menu-item {
 	    color: #fff;
    }
    #footer2{
-   	transform: translateY(25%);
+   	transform: translateY(127%);
    }
    .self {
 	height: 100%;
@@ -311,6 +311,7 @@ ul .menu-item {
 	width: 65px;
 	height: 160px;
 	background: rgba(2, 2, 2, 0.623);
+	filter: blur(0.2px);
 	transform: translateY(200px);
 	transition: .3s ease-in-out;
 }
