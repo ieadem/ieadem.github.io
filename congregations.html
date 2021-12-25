@@ -42,7 +42,7 @@
   <!--<div class="details">
    <details>
    	<summary>sede</summary>
-   	<img src="img/sede.png">
+   	<img src="img/icon.png" class="self">
    	<p>bairro: centro</p>
    	<p>rua: jovita fontes
    	<p>número: 443</p>
@@ -445,15 +445,7 @@
 	 </div>
    </details>
    </div>-->
-    <script type="text/javascript" src="vanilla-tilt.js"></script>
-    <script>
-    	VanillaTilt.init(document.querySelectorAll(".card"),{
-    		max: 25,
-    		speed: 400,
-    		glare: true,
-    		"max-glare": 1,
-    	});
-    </script>
+    
    <center><label for="function"><h5>escolha a congregação abaixo:</h5></label></center><br/>
    <center><select name="função" id="data">
         <option>Carregando...</option>
@@ -469,8 +461,17 @@
     	<summary>Líderes e auxiliares</summary>
      <div class="object"><i id="object2"></i></div>
     </details>
-    
     <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+    <script>
+    	VanillaTilt.init(document.querySelectorAll(".container"),{
+    		max: 15,
+    		speed: 400,
+    		glare: true,
+    		"max-glare": 1,
+    	});
+    </script>
+    
     
    <footer id="footer2">
    	 <p onclick="contact()">Contate-nos</p>
