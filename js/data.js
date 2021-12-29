@@ -34,10 +34,10 @@ const adms = {
 		"name": "Adm Ferreira",
 		"text": "com: ferreira"
 	},
-	"nova esperança": {
+	"esperança": {
 		"image": "",
-		"name": "Adm Nova esperança",
-		"text": "faz: nova esperança<br/>centro"
+		"name": "Adm Esperança",
+		"text": "faz: Esperança<br/>centro"
 	},
 	"paulo freire": {
 		"image": "",
@@ -274,7 +274,7 @@ const ieadem = {
     	   }
       }
     },
-    "nova esperança": {
+    "esperança": {
       "obreiros": {
       	 "Anivaldo": {
     	   	"image": "",
@@ -463,12 +463,12 @@ const ieadem = {
 	 	<div class="card">
 	 		<image source src="img/jequitibá.png" class="self"/>
 	 		<div class="layer">
-	 			<span></span>
-	 			<span></span>
-	 			<span></span>
-	 			<span></span>
-	 			<span></span>
-	 			<span></span>
+	 			<span style="--i:1;"></span>
+	 			<span style="--i:2;"></span>
+	 			<span style="--i:3;"></span>
+	 			<span style="--i:4;"></span>
+	 			<span style="--i:5;"></span>
+	 			<span style="--i:6;"></span>
 	 			<div class="text">
 	 				<h4 style="color: #c30026;text-shadow: 5px 5px 5px #675654;">ADM Jequitibá</h4>
 	 				<p>ass: Jequitibá</p>
@@ -760,6 +760,7 @@ window.onload = function(){
     let congregacao = document.getElementById("congregacao");
     let dts = document.getElementById("dts");
     let dts2 = document.getElementById("dts2");
+    let footer2 = document.getElementById("footer2");
     // Remove a opÃ§Ã£o "Carregando..." da lista
     list.innerHTML = "";
     // Adiciona cada elemento contido no objeto com as informações
@@ -782,10 +783,12 @@ window.onload = function(){
     	  congregacao.innerHTML = "";
        let info = ieadem[this.value];
        let adm = adms[this.value];
+       	   
         
        if (this.value !== "select"){
           dts.style.visibility = `visible`;
           dts.style.position = `relative`;
+          footer2.style.transform = `translateY(15%)`;
           
           if (this.value == "petruza"){
           	 dts2.style.visibility = `hidden`;
@@ -799,6 +802,7 @@ window.onload = function(){
           dts.style.position = `absolute`;
           dts2.style.visibility = `hidden`;
           dts2.style.position = `absolute`;
+          footer2.style.transform = `translateY(127%)`;
         };
         
        congregacao.innerHTML += `
@@ -806,12 +810,12 @@ window.onload = function(){
 	 	      <div class="card">
 	 		     <image source src="${adm['image']}"/>
 	 		       <div class="layer">
-	        			<span></span>
-	 	         		<span></span>
-	 	        		<span></span>
-	 	        		<span></span>
-	 	        		<span></span>
-	 	        		<span></span>
+	        			<span style="--i:1;"></span>
+	 	         		<span style="--i:2;"></span>
+	 	        		<span style="--i:3;"></span>
+	 	        		<span style="--i:4;"></span>
+	 	        		<span style="--i:5;"></span>
+	 	        		<span style="--i:6;"></span>
 	        			<div class="text">
 	 		        		<h4 style="color: #c30026;text-shadow: 5px 5px 5px #675654;">${adm["name"]}</h4>
 	        				<p>${adm["text"]}</p>
@@ -830,12 +834,12 @@ window.onload = function(){
 	                     <div class="card">
 	 	                  	<image source src="${info[key][item]['image']}" class="self"/>
 	 	                  	<div class="layer">
-	 		                  	<span></span>
-	 		                  	<span></span>
-	 		                  	<span></span>
-	 		                  	<span></span>
-	                         <span></span>
-	                  			<span></span>
+	 		                  	<span style="--i:1;"></span>
+	 		                  	<span style="--i:2;"></span>
+	 		                  	<span style="--i:3;"></span>
+	 		                  	<span style="--i:4;"></span>
+	                         <span style="--i:5;"></span>
+	                  			<span style="--i:6;"></span>
 	                  			<div class="text">
 	 			                  	<h4>${info[key][item]["name"]}</h4>
 	                  				<p>${info[key][item]["function"]}</p>
@@ -850,12 +854,12 @@ window.onload = function(){
 	                     <div class="card">
 	 	                  	<image source src="${info[key][item]['image']}" class="self"/>
 	 	                  	<div class="layer">
-	 		                  	<span></span>
-	 		                  	<span></span>
-	 		                  	<span></span>
-	 		                  	<span></span>
-	                         <span></span>
-	                  			<span></span>
+	 		                  	<span style="--i:1;"></span>
+	 		                  	<span style="--i:2;"></span>
+	 		                  	<span style="--i:3;"></span>
+	 		                  	<span style="--i:4;"></span>
+	                         <span style="--i:5;"></span>
+	                  			<span style="--i:6;"></span>
 	                  			<div class="text">
 	 			                  	<h4>${info[key][item]["name"]}</h4>
 	                  				<p>${info[key][item]["function"]}</p>
