@@ -116,5 +116,6 @@ const mobileNavbar = new MobileNavbar(
 mobileNavbar.init();
 
 window.onload = function(){
+	window.alert("Olá seja bem vindo(a), este site está em desenvolvimento portanto se porventura encontrar algum bug por favor desconsidere-o!");
 	document.getElementById("copyright").innerHTML = `© IEADEM - ${new Date().getFullYear()}`;
 }
