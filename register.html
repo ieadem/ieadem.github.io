@@ -14,6 +14,15 @@
     		margin: 0;
     		padding: 0;
     }
+    #check:checked ~ #save{
+				display: block;
+				background: navy;
+				color: white;		
+	   }
+    .form button:hover{
+   	    background: white;
+   	    color: lightblue;
+     }
     @media (max-width: 768px){
    		header{
    			width: 100%;
@@ -66,10 +75,6 @@
        	width: 97%;
      }
    
-     .form button:hover{
-   	    background: #2ecc71;
-     }
-   
      .form button{
 				border: 0;
 				margin: 20px auto;
@@ -81,27 +86,26 @@
 				transition: 0.25s;
 				cursor: pointer;
 				display: block;
-				color: white;
-				background: navy; /*#939DB6;*/
-	   }
-			
-	   #check ~ #save{
-				display: none;
-	   }
-	   #check ~ #view{
 				background: white;
 				color: lightblue;
 	   }
 			
-	   #check:checked ~ #save{
-				display: block;
-	   }
-	   #check:checked ~ #view{
-				display: none;
-	   }
-	   #sp{
+	   #aviso{
 	   	font-size: 12px;
 	   }
+	   .icons{
+   	text-align: center;
+   	margin-bottom: 20px;
+   }
+   .icons a{
+   	margin: 2px;
+   }
+   .icons a.fa-facebook-square{
+   	color: #4267b2;
+   }
+   .icons a.fa-instagram{
+   	color: #d72888;
+   }
    }
    
    @media (min-width: 575px){
@@ -148,7 +152,7 @@
      	margin: 40px 0px 80px 0px;
      	font-size: 25px;
      }
-     #sp{
+     #aviso{
      	font-size: 25px;
      }
      .form input[type="text"],.form input[type="email"],.form input[type="tel"]{
@@ -165,10 +169,6 @@
        	width: 97%;
      }
    
-     .form button:hover{
-   	    background: #2ecc71;
-     }
-   
      .form button{
 				border: 0;
 				margin: 40px auto;
@@ -181,22 +181,8 @@
 				transition: 0.25s;
 				cursor: pointer;
 				display: block;
-				color: white;
-				background: navy; /*#939DB6;*/
-	   }
-	   #check ~ #save{
-				display: none;
-	   }
-	   #check ~ #view{
-				background: white;
 				color: lightblue;
-	   }
-			
-	   #check:checked ~ #save{
-				display: block;
-	   }
-	   #check:checked ~ #view{
-				display: none;
+				background: white;
 	   }
    }
 	  </style>
@@ -217,9 +203,8 @@
      	
      <label for="tel">Tel</label>
      <input name="tel" type="tel" id="tel" placeholder="informe seu telefone" required="true"/>
-     <input type="checkbox" required="true" id="check"><span id="sp">De acordo com as Leis 12.965/2014 e 13.709/2018, que controlam o uso da internet e o tratamento de dados pessoais no Brasil, ao me increver eu autorizo ieadem( igreja evangélica Assembléia de Deus em Mucuri) a enviar-me notificações por e-mail ou outros meios e concordo com seus <a href="terms.html">Termos de Uso</a> e <a href="privacy_policy.html">Política de Privacidade!</a></span>
+     <input type="checkbox" required="true" id="check"><span id="aviso">De acordo com as Leis 12.965/2014 e 13.709/2018, que controlam o uso da internet e o tratamento de dados pessoais no Brasil, ao me increver eu autorizo ieadem( igreja evangélica Assembléia de Deus em Mucuri) a enviar-me notificações por e-mail ou outros meios e concordo com seus <a href="terms.html">Termos de Uso</a> e <a href="privacy_policy.html">Política de Privacidade!</a></span>
        <button type="submit" id="save">Enviar</button>
-       <button type="submit" id="view">Enviar</button>
      </input>
    </form>
 	 
@@ -259,6 +244,12 @@
    <br/>
    <footer>
    	 <p onclick="contact()">Contate-nos</p>
+   	 <div class="icons">
+   	 	<a href="/" class="fab fa-facebook-square">facebook</a>
+   	 	<a href="/" class="fab fa-instagram">instagram</a>
+   	 	<a href="https://github.com/ieadem" class="fab fa-github">github</a>
+   	 </div>
+   	 <script src="https://kit.fintawesome.com/581cfdab3c.js" crossorigin="anonymous"></script>
    	 <p onclick="about_developer()">Sobre o desenvolvedor</p>
    	 <p onclick="privacy_policy()">política de privacidade</p>
    	 <p onclick="terms()">termos de uso</p>
