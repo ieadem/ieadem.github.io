@@ -81,12 +81,25 @@
    	    	padding-top: 20px;
    	    	transform: translateY(200%);
    	    	text-align: center;
-   	    	height: 300px;
+   	    	height: 320px;
    	    }
    	    footer p{
    	    	font-size: 14px;
    	    	padding-left: 2px;
    	    }
+   	    .icons{
+   	text-align: center;
+   	margin-bottom: 20px;
+   }
+   .icons a{
+   	margin: 2px;
+   }
+   .icons a.fa-facebook-square{
+   	color: #4267b2;
+   }
+   .icons a.fa-instagram{
+   	color: #d72888;
+   }
 			}
 			@media (min-width: 575px){
 				.form{
@@ -198,6 +211,12 @@
    <br/>
    <footer>
    	 <p onclick="contact()">Contate-nos</p>
+   	 <div class="icons">
+   	 	<a href="/" class="fab fa-facebook-square">facebook</a>
+   	 	<a href="/" class="fab fa-instagram">instagram</a>
+   	 	<a href="https://github.com/ieadem" class="fab fa-github">github</a>
+   	 </div>
+   	 <script src="https://kit.fintawesome.com/581cfdab3c.js" crossorigin="anonymous"></script>
    	 <p onclick="about_developer()">Sobre o desenvolvedor</p>
    	 <p onclick="privacy_policy()">política de privacidade</p>
    	 <p onclick="terms()">termos de uso</p>
