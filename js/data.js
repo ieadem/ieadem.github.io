@@ -465,7 +465,7 @@ window.onload = function(){
        if (!document.querySelector(".menu-mobile.active") || this.value !== "select"){
           dts.style.visibility = `visible`;
           dts.style.position = `relative`;
-          footer2.style.transform = `translateY(12%)`;
+          footer2.style.transform = `translateY(14%)`;
           
           if (this.value == "petruza"){
           	 dts2.style.visibility = `hidden`;
@@ -479,7 +479,7 @@ window.onload = function(){
           dts.style.position = `absolute`;
           dts2.style.visibility = `hidden`;
           dts2.style.position = `absolute`;
-          footer2.style.transform = `translateY(117%)`;
+          footer2.style.transform = `translateY(120%)`;
         };
         
        congregacao.innerHTML += `
