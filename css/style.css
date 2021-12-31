@@ -51,7 +51,7 @@ header{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #121212;
+	background-color: #23232e;
 	box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
 	z-index: 12;
 	
@@ -83,51 +83,61 @@ ul{
 ul .menu-item {
 	color: #fff;
 }
-
-.menu-item{
-	font-size: 18px;
-	margin-left: 2rem;
-	cursor: pointer;
-}
-
 .menu-mobile{
 	position: absolute;
 	top: 88px;
 	left: 0;
 	transform: translateX(-100%);
-	height: calc(100% - 390px);
-	width: 70%;
+	width: 50%;
+	height: 620px;
 	display: flex;
-	justify-content: flex-start;
-	align-items: flex-end;
+	list-style: none;
+	justify-content: space-around;
+	align-items: center;
 	flex-direction: column;
-	background-color: #1a1a1a;
+	background-color: #23232e;
 	color: #fff;
 	transition: 1s;
 }
 .menu-mobile .menu-item{
-	height: 60px;
+	height: 20px;
 	width: 100%;
-	border-bottom: 1px solid rgb(46, 46, 46);
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
 	transition: 0.5s;
-	padding-left: 30px;
+	padding-left: 50px;
 	box-sizing: border-box;
+	margin-left: 0;
+	opacity: 0;
+	font-size: 18px;
+	cursor: pointer;
 }
-
 .menu-mobile .menu-item:hover{
-	background-color: rgb(46,46,46);
-	transition: transform 0.5s ease;
-}
+  	background-color: rgb(46,46,46);
+  	transition: transform 0.5s ease;
+ }
 
-@media (max-width:768px){ /*768*/
+@media (max-width:768px){
    li {
    	color: rgb(0, 0, 0, 255);
    	padding-top: 7px;
    	padding-left: 12px;
    }
+   .menu-mobile.active {
+     transform: translateX(0);
+   }
+   @keyframes navLinkFade {
+     from {
+       opacity: 0;
+       transform: translateX(-70px);
+     }
+     to {
+       opacity: 1;
+       transform: translateX(0);
+     }
+   }
+   
    select {
 	  color: red;
 	  text-align: center;
@@ -282,7 +292,7 @@ ul .menu-item {
     	justify-content: flex-start;
     	flex-direction: column;
     	align-items: flex-end;
-    	background-color: #121212;
+    	background-color: #23232e;
     	box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
    }
    footer p{
@@ -291,20 +301,25 @@ ul .menu-item {
 	    color: #fff;
    }
    #footer2{
-   	transform: translateY(127%);
+   	transform: translateY(117%);
    }
    .icons{
    	text-align: center;
-   	margin-bottom: 20px;
+   	margin-top: 5px;
+   	margin-bottom: 25px;
    }
    .icons a{
-   	margin: 2px;
+   	margin: 7px;
+     font-size: 20px;
    }
    .icons a.fa-facebook-square{
    	color: #4267b2;
    }
    .icons a.fa-instagram{
    	color: #d72888;
+   }
+   .icons a.fa-github{
+   	color: black;
    }
    .self {
    	height: 100%;
@@ -604,6 +619,17 @@ ul .menu-item {
      	padding-left: 30px;
     	padding-right: 30px;
    }
+   details{
+   	text-align: center;
+   	justify-content: center;
+   	font-size: 20px;
+   	margin-top: 40px;
+   	margin-bottom: 40px;
+   	font-family: Open Sans, sans-serif;
+   	color: #7983Fe;
+   	visibility: hidden;
+		position: absolute;
+	}
    .details {
 	display: block;
 	text-align: center;
@@ -627,7 +653,7 @@ summary{
      	padding: 20px 0px 70px 0px;
      	transform: translateY(32%);
     	justify-content: center;
-    	background-color: #121212;
+    	background-color: #23232e;
     	box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
    }
    #footer1 p{
@@ -663,6 +689,7 @@ summary{
 	display: block;
 	width: 430px;
 	height: 320px;
+	filter: blur(0.2px);
 	background: rgba(2, 2, 2, 0.623);
 	transform: translateY(400px);
 	transition: .3s ease-in-out;
@@ -816,16 +843,7 @@ h5{
 	font-size: 30px;
 }
 }
-audio {
-   	display: block;
-}
-auth {
-	color:red;
-}
-code {
-	align: center;
-	padding-left: 140px;
-}
+
 p {
 	color:black;
 	text-align: center;
@@ -836,7 +854,7 @@ img {
 	padding-left: 0px;
 	padding-right: 0px;
 }
-table {
+/*table {
 	border-style:solid;
 	border-color:#0066FF;
 	border-width:2px;
@@ -845,16 +863,11 @@ table {
 tr td,tr th {
 	border-style:solid;
 	border-color:#0099FF;
-}
+}*/
 
 h1,h2,h3,h4 {
 	font-family: 'MR ROBOT', 'Lucida Console';
 	text-align: center;
 	color: black;
 	margin: 20px;
-}
-hr {
-	align: center;
-	padding-top: 5px;
-	border-color: #fff;
 }
