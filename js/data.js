@@ -462,10 +462,10 @@ window.onload = function(){
        let adm = adms[this.value];
               	   
         
-       if (!document.querySelector(".menu-mobile.active") || this.value !== "select"){
+       if (!document.querySelector(".menu-mobile.active") && this.value !== "select"){
           dts.style.visibility = `visible`;
           dts.style.position = `relative`;
-          footer2.style.transform = `translateY(20%)`;
+          footer2.style.transform = `translateY(12%)`;
           
           if (this.value == "petruza"){
           	 dts2.style.visibility = `hidden`;
