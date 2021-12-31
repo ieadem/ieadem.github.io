@@ -89,7 +89,7 @@ ul .menu-item {
 	left: 0;
 	transform: translateX(-100%);
 	width: 50%;
-	height: 630px;
+	height: 650px;
 	display: flex;
 	list-style: none;
 	justify-content: space-around;
@@ -401,7 +401,6 @@ ul .menu-item {
     	overflow: hidden;
    	padding: 2.5px;
    	cursor: pointer;
-   	transition: .5s ease;
    	box-sizing: border-box;
    }
    .card:hover{
