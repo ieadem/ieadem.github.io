@@ -465,7 +465,7 @@ window.onload = function(){
        if (!document.querySelector(".menu-mobile.active") || this.value !== "select"){
           dts.style.visibility = `visible`;
           dts.style.position = `relative`;
-          footer2.style.transform = `translateY(14%)`;
+          footer2.style.transform = `translateY(20%)`;
           
           if (this.value == "petruza"){
           	 dts2.style.visibility = `hidden`;
