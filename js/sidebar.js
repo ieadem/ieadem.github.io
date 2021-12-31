@@ -3,7 +3,7 @@ var menu = document.getElementById('Menu');
 
 mobileMenu.addEventListener("click", function(){
 	menu.classList.toggle('open');
-	if (document.querySelector('.congregacao').style.visibility == `hidden`){
+	if (document.querySelector(".menu-mobile.active")){
 		document.querySelector('.congregacao').style.visibility = `visible`;
 		if (document.getElementById('data').value !== 'select'){
 	   	 document.getElementById('dts').style.display =`block`;
@@ -20,6 +20,11 @@ mobileMenu.addEventListener("click", function(){
 	   	document.getElementById('dts2').style.position = `absolute`;
 	   	}
 	}
+	/*if (document.querySelector(".menu-mobile.active")){
+		window.alert("yes");
+	}else{
+		window.alert("not");
+	}*/
 })
 
 
@@ -87,15 +92,29 @@ function license(){
 }
 
 class MobileNavbar {
-  constructor(mobileMenu) {
+  constructor(mobileMenu, navlist, navlinks) {
     this.mobileMenu = document.querySelector(mobileMenu);
+    this.navlist = document.querySelector(navlist);
+    this.navlinks = document.querySelectorAll(navlinks);
     this.activeClass = "active"
 
     this.handleClick = this.handleClick.bind(this);
   }
+  
+  animateLinks() {
+    this.navlinks.forEach((link, index) => {
+      link.style.animation
+        ? (link.style.animation = "")
+        : (link.style.animation = `navLinkFade 0.5s ease forwards ${
+            index / 7 + 0.3
+          }s`);
+    });
+  }
 
   handleClick() {
     this.mobileMenu.classList.toggle(this.activeClass);
+    this.navlist.classList.toggle(this.activeClass);
+    this.animateLinks();
   }
 
   addClickEvent() {
@@ -112,6 +131,8 @@ class MobileNavbar {
 
 const mobileNavbar = new MobileNavbar(
   ".mobile-menu",
+  ".menu-mobile",
+  ".menu-mobile span",
 );
 mobileNavbar.init();
 
