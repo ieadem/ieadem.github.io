@@ -37,7 +37,7 @@ const adms = {
 	"esperança": {
 		"image": "",
 		"name": "Adm Esperança",
-		"text": "faz: Esperança<br/>centro"
+		"text": "faz: Esperança<br/>&nbsp&nbsp&nbsp&nbspcentro"
 	},
 	"paulo freire": {
 		"image": "",
@@ -460,12 +460,12 @@ window.onload = function(){
     	  congregacao.innerHTML = "";
        let info = ieadem[this.value];
        let adm = adms[this.value];
-       	   
+              	   
         
-       if (this.value !== "select"){
+       if (!document.querySelector(".menu-mobile.active") || this.value !== "select"){
           dts.style.visibility = `visible`;
           dts.style.position = `relative`;
-          footer2.style.transform = `translateY(15%)`;
+          footer2.style.transform = `translateY(12%)`;
           
           if (this.value == "petruza"){
           	 dts2.style.visibility = `hidden`;
@@ -479,7 +479,7 @@ window.onload = function(){
           dts.style.position = `absolute`;
           dts2.style.visibility = `hidden`;
           dts2.style.position = `absolute`;
-          footer2.style.transform = `translateY(127%)`;
+          footer2.style.transform = `translateY(117%)`;
         };
         
        congregacao.innerHTML += `
